@@ -17,17 +17,16 @@ import java.util.TimerTask;
 public class Main2Activity extends AppCompatActivity {
     int advancedScore;
     CountDownTimer myCountDown;
-    Button button1, button2, button3, button4, button5, button6, button7, button8, button9;
     TextView scoreTxtView;
     String selectedValue;
 
-    private static final String TAG = "Whack-A-Mole";
+    private static final String TAG = "Whack-A-Mole 2.0";
 
     private void readyTimer(){
         myCountDown = new CountDownTimer(10000, 1000){
             public void onTick(long millisUntilFinished){
                 int seconds = (int) millisUntilFinished/1000;
-                System.out.println(seconds);
+                Log.v(TAG, String.format("Ready CountDown! %d", seconds));
                 Toast.makeText(getApplicationContext(), String.format("Get ready in %d seconds", seconds) ,Toast.LENGTH_SHORT).show();
             }
 
@@ -46,6 +45,7 @@ public class Main2Activity extends AppCompatActivity {
             public void onTick(long millisUntilFinished){
                 int seconds = (int) millisUntilFinished/1000;
                 setNewMole();
+                Log.v(TAG, "New Mole Location");
             }
 
             public void onFinish(){

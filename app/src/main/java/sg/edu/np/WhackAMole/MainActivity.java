@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public  Button ButtonMiddle;
     public  Button ButtonRight;
     public TextView scoreTxtView;
-    private static final String TAG = "Whack-A-Mole";
+    private static final String TAG = "Whack-A-Mole 1.0";
 
     String selectedValue;
     int score = 0;
